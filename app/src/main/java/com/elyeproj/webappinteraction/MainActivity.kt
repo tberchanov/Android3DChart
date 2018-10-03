@@ -23,11 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            if (0 != (applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE)) {
-                WebView.setWebContentsDebuggingEnabled(true)
-            }
-        }
+        WebView.setWebContentsDebuggingEnabled(true)
 
         my_web_view.settings.javaScriptEnabled = true
         my_web_view.loadUrl(BASE_URL)
